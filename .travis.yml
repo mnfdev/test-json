@@ -25,6 +25,12 @@ matrix:
     - os: linux
       dist: trusty
       compiler: clang
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-6             # fix stdlib (in default configuration clang-5 uses stdlib from gcc-4.8)
 
 #    Exclude linux/precise: "#error "unsupported GCC version" (gcc 4.6.3)
 #    - os: linux
