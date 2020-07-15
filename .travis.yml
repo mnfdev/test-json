@@ -19,8 +19,9 @@ matrix:
     - os: linux
       dist: trusty
 
-    - os: linux
-      dist: precise
+#    Exclude linux/precise: "#error "unsupported GCC version" (gcc 4.6.3)
+#    - os: linux
+#      dist: precise
 
     - os: osx
       osx_image: xcode12
