@@ -1,23 +1,30 @@
 language: cpp
 
-os:
-    - linux
-    - osx
-
-compiler:
-    - gcc
-    - clang
-
 matrix:
   include:
     - os: linux
       dist: bionic
+      compiler: gcc
+
+    - os: linux
+      dist: bionic
+      compiler: clang
 
     - os: linux
       dist: xenial
+      compiler: gcc
+
+    - os: linux
+      dist: xenial
+      compiler: clang
 
     - os: linux
       dist: trusty
+      compiler: gcc
+
+    - os: linux
+      dist: trusty
+      compiler: clang
 
 #    Exclude linux/precise: "#error "unsupported GCC version" (gcc 4.6.3)
 #    - os: linux
